@@ -1,117 +1,198 @@
 :root {
-    --background-gradient-start: #004d25;
-    --background-gradient-end: #082c1c;
-    --highlight-color: #00ff99;
-    --button-background: #00b66c;
-    --button-hover-background: #00ff99;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-end));
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
-    flex-wrap: wrap;
-    background: url('../../assets/raiosfull.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-  }
-  
-  .leftContent {
-    flex: 1;
-    max-width: 45%;
-    min-width: 300px;
-  }
-  
-  .leftContent h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .highlight {
-    color: var(--highlight-color);
-  }
-  
-  .description {
-    margin-top: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
-  .link {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--highlight-color);
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  
-  .formContainer {
-    flex: 1;
-    max-width: 20%;
-    min-width: 300px;
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    color: black;
-  }
-  
-  .formTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .formTitle span {
-    color: #00b66c;
-  }
-  
-  .formDescription {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    color: #555;
-  }
-  
-  .inputField {
-    width: 93%;
-    padding: 10px;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .submitButton {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 10px;
-    background: var(--button-background);
-    border: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .submitButton:hover {
-    background: var(--button-hover-background);
-  }
-  
+  --background-gradient-start: #004d25;
+  --background-gradient-end: #082c1c;
+  --highlight-color: #00ff99;
+  --button-background: #00b66c;
+  --button-hover-background: #00ff99;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-end));
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  flex-wrap: wrap;
+  background: url('../../assets/raiosfull.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+.leftContent {
+  flex: 1;
+  max-width: 45%;
+  min-width: 300px;
+}
+
+.leftContent h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--highlight-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.formContainer {
+  flex: 1;
+  max-width: 20%;
+  min-width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.formTitle span {
+  color: #00b66c;
+}
+
+.formDescription {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.inputField {
+  width: 93%;
+  padding: 10px;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submitButton {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px;
+  background: var(--button-background);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submitButton:hover {
+  background: var(--button-hover-background);
+}
+
+.formContainer {
+  flex: 1;
+  max-width: 40%;
+  min-width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: auto;
+  height: auto;
+}
+
+.tableContainer {
+  margin-top: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: var(--button-background);
+  color: white;
+}
+
+.table td {
+  background-color: #f9f9f9;
+}
+
+.table td:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.supplierLogo {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.backButton {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px;
+  background: var(--button-background);
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.backButton:hover {
+  background: var(--button-hover-background);
+}
