@@ -1,0 +1,52 @@
+:root {
+    --highlight-color: #00ff99;
+    --button-background: #00ff99;
+    --button-hover-background: #00b66c;
+    --header-background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-end));
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-end));
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 80px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    background: var(--header-background);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 0.5px solid white;
+  }
+  
+  .header .logo {
+    height: 60px;
+    margin-right: 20px;
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navList li a {
+    color: white;
+    text-decoration: none;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  }
+  
+  .navList li a:hover {
+    color: white;
+    font-weight: bold;
+  }
+  
