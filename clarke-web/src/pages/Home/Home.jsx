@@ -55,17 +55,20 @@ const Home = () => {
   ];
 
   const handleConfirm = () => {
-    if (consumption > 0) {
-      const filteredSuppliers = suppliersData.map((supplier) => ({
-        name: supplier.nome,
-        logo: supplier.logo,
-        state: supplier.estadoOrigem,
-        pricePerKwh: supplier.custoKwh,
-        minKwh: supplier.limiteMinKwh,
-        totalClients: supplier.numeroClientes,
-        avgRating: supplier.avaliacaoMedia,
-        total: consumption * supplier.custoKwh,
-      }));
+    const consumoNumerico = parseFloat(consumption);
+    if (consumoNumerico > 0) {
+      const filteredSuppliers = suppliersData
+        .filter(supplier => consumoNumerico >= supplier.limiteMinKwh)
+        .map(supplier => ({
+          name: supplier.nome,
+          logo: supplier.logo,
+          state: supplier.estadoOrigem,
+          pricePerKwh: supplier.custoKwh,
+          minKwh: supplier.limiteMinKwh,
+          totalClients: supplier.numeroClientes,
+          avgRating: supplier.avaliacaoMedia,
+          total: consumoNumerico * supplier.custoKwh,
+        }));
 
       setEnergySuppliers(filteredSuppliers);
       setShowTable(true);
@@ -81,7 +84,7 @@ const Home = () => {
     <div className={styles.container}>
       <div className={styles.leftContent}>
         <h1>
-          Simule o seu potencial de <span className={styles.highlight}>economia</span> no{" "}
+          Simule o seu potencial de <span className={styles.highlight}>economia</span> no {" "}
           <span className={styles.highlight}>mercado livre</span> de energia
         </h1>
       </div>
