@@ -1,5 +1,4 @@
 :root {
-    /* Definir a cor do fundo e outras variáveis globais */
     --background-gradient-start: #004d25;
     --background-gradient-end: #082c1c;
     --highlight-color: #00ff99;
@@ -22,6 +21,10 @@
     min-height: 100vh;
     padding: 2rem;
     flex-wrap: wrap;
+    background: url('../../assets/raiosfull.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
   }
   
   .leftContent {
